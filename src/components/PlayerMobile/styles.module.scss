@@ -1,0 +1,95 @@
+.playerContainer {
+  position: fixed;
+  bottom: 0;
+
+  background: var(--purple-500);
+
+  height: 6.5rem;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  padding: 1.5rem;
+
+  button {
+    border: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+    background: var(--purple-800);
+  }
+
+  strong {
+    font: 600 1.25rem Lexend, sans-serif;
+    color: var(--white);
+    // max-width: 55%;
+    white-space: nowrap;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // font-size: 1.5rem;
+    // overflow: hidden;
+  }
+
+  .buttonsContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    button {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 1rem;
+
+      background: var(--purple-800);
+      border: 0;
+      font-size: 0;
+
+      transition: filter 0.2s;
+
+      &:disabled {
+        cursor: default;
+        opacity: 0.5;
+      }
+
+      &:hover:not(:disabled) {
+        filter: brightness(0.8);
+      }
+
+      &.isActive {
+        filter: invert(0.35) sepia(1) saturate(3) hue-rotate(100deg);
+      }
+
+      &.isActive:hover {
+        filter: brightness(0.6) invert(0.35) sepia(1) saturate(3) hue-rotate(100deg);
+      }
+
+      &.playButton {
+        width: 4rem;
+        height: 4rem;
+        &:hover:not(:disabled) {
+          filter: brightness(0.95);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .playerContainer {
+    display: flex;
+  }
+}
+@media (min-width: 1200px) {
+  .playerContainer {
+    display: none;
+  }
+}
+
+.marquee {
+  span {
+    color: var(--white);
+  }
+}

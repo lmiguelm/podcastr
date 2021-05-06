@@ -134,3 +134,14 @@
     }
   }
 }
+
+@media (max-width: 1200px) {
+  .playerContainer {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .playerContainer {
+    display: flex;
+  }
+}

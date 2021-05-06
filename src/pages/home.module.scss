@@ -172,3 +172,18 @@
     }
   }
 }
+
+@media (max-width: 720px) {
+  .latestEpisodes {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+
+  .homepage {
+    height: calc(100vh);
+    padding: 0rem 1rem;
+  }
+}
